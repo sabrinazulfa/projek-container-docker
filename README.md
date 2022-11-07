@@ -68,4 +68,4 @@ Step 5: Buka browser untuk mulai mengakses app PHP
 ```bash
 http://IPHOST:8081
 ```
-Dan akan muncul PHP.info sebagai outputnya. terimakasih
+Dan akan muncul PHP.info sebagai outputnya. terimakasih. semoga sukses...
