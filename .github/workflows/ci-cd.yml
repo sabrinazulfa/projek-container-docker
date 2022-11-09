@@ -1,6 +1,6 @@
 name: deploy to aws codepipeline
 on:
-  push:
+  release:
    branches: [main]
   pull_request:
 jobs:
