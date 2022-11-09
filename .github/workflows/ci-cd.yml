@@ -1,6 +1,7 @@
 name: deploy to aws codepipeline
 on:
-  release
+  release:
+    types: [published]
 jobs:
   deploy:
     runs-on: ubuntu-latest
