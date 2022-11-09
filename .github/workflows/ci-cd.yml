@@ -1,0 +1,17 @@
+name: deploy to aws codepipeline
+on:
+  release:
+    types: [published]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Trigger AWS CodePipeline
+        uses: sabrinazulfa/projek-container-docker@2.299.1
+        if: github.ref == '^refs/tags/sabrina.*'
+        with:
+          aws-region: "ap-southeast-1"
+          aws-access-key: ${{ secrets.AWS_PIPELINE_ACCESS_KEY }}
+          aws-secret-key: ${{ secrets.AWS_PIPELINE_SECRET_KEY }}
+          pipeline-name: "testing"
