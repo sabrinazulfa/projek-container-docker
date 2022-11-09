@@ -3,7 +3,10 @@ on:
   release:
     types: [published]
 jobs:
+  job1:
+    ... code for job1 ...
   deploy:
+    needs: job1
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
