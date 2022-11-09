@@ -1,12 +1,14 @@
 name: deploy to aws codepipeline
 on:
-  release:
-    types: [published]
+  push:
+    branches: [master]
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: 'master'
       - name: Trigger AWS CodePipeline
         uses: sabrinazulfa/projek-container-docker@2.299.1
         if: github.ref == '^refs/tags/sabrina.*'
