@@ -71,3 +71,4 @@ http://IPHOST:8081
 Dan akan muncul PHP.info sebagai outputnya. terimakasih. semoga sukses...)
 thank you for the hardwork
 capek itu wajar
+tetep semangat yaa:)
